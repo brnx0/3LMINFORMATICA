@@ -1,0 +1,54 @@
+.listagemGrupos{
+    width: auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.listagemGrupos h6{
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    border: 1px solid black;
+    
+}
+
+#formProdutos{
+    display: flex;
+    flex-wrap: wrap;
+}
+#formProdutos div{
+    margin: 5px;
+
+}
+table{
+    width: 100%;
+}
+thead tr{
+   
+    display: flex;
+    /* align-items: center; */
+    justify-content: space-evenly;
+    background-color: rgb(155, 155, 155)
+
+}
+thead tr td{
+    width: 100%;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+}
+tbody tr{
+   
+    display: flex;
+    /* align-items: center; */
+    justify-content: space-evenly;
+    background-color: rgb(206, 202, 202)
+
+}
+tbody tr td{
+    width: 100%;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+}
+
