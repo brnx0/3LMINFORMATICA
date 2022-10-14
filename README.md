@@ -10,3 +10,6 @@ Se preferirem podem  clonar o repositorio e rodar com o auxilio do XAMPP, ou qua
 Link XAMPP: https://www.apachefriends.org/pt_br/index.html<br/>
 <br/>
 Desde já agradeço por essa oportunidade, foi bem proveitosa para consolidar meus conhecimentos.
+<br/>
+Att. <br/>
+Breno Oliveira
