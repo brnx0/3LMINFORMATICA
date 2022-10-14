@@ -56,13 +56,13 @@ ALTER TABLE `produtos`
 -- AUTO_INCREMENT de tabela `grupos`
 --
 ALTER TABLE `grupos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, 
 
 --
 -- AUTO_INCREMENT de tabela `produtos`
 --
 ALTER TABLE `produtos`
-  MODIFY `idProduto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
+  MODIFY `idProduto` int(11) NOT NULL AUTO_INCREMENT, 
 
 --
 -- Restrições para despejos de tabelas
