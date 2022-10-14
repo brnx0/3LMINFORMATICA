@@ -34,6 +34,15 @@ require_once('connect.php');
             $this->res = $this->stmt->fetchALL(PDO::FETCH_ASSOC);
             return $this->res;
         }
+
+        public function delete(){
+            $this->stmt = $this->getConnection()->prepare('DELETE FROM  produtos WHERE idProduto = :idProduto');
+            $this->stmt->bindParam(':idProduto', $_POST['idProduto']);
+            $this->stmt->execute();
+
+    
+        }
+        
         
     }
     

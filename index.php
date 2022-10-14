@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="style/style.css">
+   
+    
     <meta name="viewport" content="width= initial-scale=1.0">
     
     <!-- CSS only -->
@@ -14,8 +16,17 @@
     
 </head>
 <body>
+<nav class="navbar navbar-light bg-light "id="noFlex" >
+  <div id="logo">
+    <img class="logo" src="http://3lminformatica.com.br/site/wp-content/themes/3lm-theme/assets/images/3lmlogo.png" alt="3LM Informática">
+  </div>
   <?php include 'pages/produto.php'; ?>
   <?php include 'pages/grupo.php'; ?>
-  </body>
+
+ </nav>
+  
+  
+</body>
+ 
 </html>
  

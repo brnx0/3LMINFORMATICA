@@ -15,11 +15,11 @@
             <form action=".\admin/validar.php" method="post" id=formProdutos>    <!--   /*Formulario de insert na tabela Produtos*/ -->
                 <div class=descricao>
                   <h6>Descrição</h6>
-                  <input type="text" name="descricao" ">
+                  <input type="text" name="descricao" id="name" required ">
                 </div>
                 <div>
                   <H6>UND</H6>
-                  <select name="und" id="">
+                  <select name="und" id="" required>
                     <option value="">-</option selected>
                     <option value="und">UND</option>
                     <option value="cx">CX</option>
@@ -30,8 +30,8 @@
                 </div>
                 <div >
                   <H6>Grupo</H6>
-                  <select name="grupo">
-                    <option value="" selected>-</option>
+                  <select name="grupo" required>
+                    <option value="" selected required >-</option>
                     <?php /**Trazer os valores da tabela Grupo */
                       require './admin/validar.php';
                       foreach ($grupo->read() as $grupo->row ):
@@ -42,7 +42,7 @@
                 </div>
                 <Div>
                   <h6>Tipo</h6>
-                  <select name="tipo" id="">
+                  <select name="tipo" id="" required>
                     <option value="">-</option selected>
                     <option value="pa">PA</option>
                     <option value="mp">MP</option>
@@ -50,36 +50,45 @@
                 </Div>
                 <div>
                   <h6>Cod. Barras</h6>
-                  <input type="text" name="codBarras" id="">
+                  <input type="text" name="codBarras" id="name" required>
                 </div>
                 <div>
                   <h6>Saldo</h6>
-                  <input type="number" name="saldo"  step="any" id="">
+                  <input type="number" name="saldo"  step="any" id="" required>
                 </div>
               </form>
             </div>
-            <table>
+            <table >
               <thead>
-                <tr>
-                  <td>Descrição</td>
-                  <td>Cod.Barras</td>
-                  <td>UND.</td>
-                  <td>Grupo</td>
-                  <td>Tipo</td>
-                  <td>Saldo</td>
+                <tr >
+                  <td id="desc">Descrição</td>
+                  <td id="cod">Cod.Barras</td>
+                  <td id="und">UND.</td>
+                  <td id="gp">Grupo</td>
+                  <td id="tp">Tipo</td>
+                  <td id="saldo">Saldo</td>
+                  <td id="check"></td>
                 </tr>
               </thead>
               <tbody>
                 <?php foreach ($produto->read() as $produto->row):?>
-                  <tr>
-                    <td><?=$produto->row['descricao'];?></td>
-                    <td><?=$produto->row['codBarra'];?></td>
-                    <td><?=$produto->row['undMedida'];?></td>
+                  
+                  <tr class="linha" id="<?=$produto->row['idProduto'];?>">
+                    <td id="desc" ><?=$produto->row['descricao'];?></td>
+                    <td id="cod"><?=$produto->row['codBarra'];?></td>
+                    <td id="und"><?=$produto->row['undMedida'];?></td>
                     <?php foreach ($produto->select($produto->row['grupo']) as $produto->row1):?> <!--Trazer o nome do grupo que o produto pertence -->
-                      <td><?=$produto->row1['grupo']?></td>
+                      <td  id="gp"><?=$produto->row1['grupo']?></td>
                     <?php endforeach;?>
-                    <td><?=$produto->row['tipo'];?></td>
-                    <td><?=$produto->row['saldo'];?></td>
+                    <td id="tp" ><?=$produto->row['tipo'];?></td>
+                    <td  id="saldo"><?=$produto->row['saldo'];?></td>
+                   
+                      <td id="check">
+                        <form action=".\admin/validar.php" id="excluirProduto" method="post">
+                          <input type="radio" name="idProduto" value="<?=$produto->row['idProduto']; ?>">
+                        </form>
+                      </td>
+                    
                   </tr>
                   
                 <?php endforeach ?>
@@ -89,8 +98,8 @@
 
 
             <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-              <button form="formProdutos"class="btn btn-primary" name="produto" value="produto">Salvar</button>
+              <button form="excluirProduto" class="btn btn-secondary" name="delete" value="produto">Excluir</button>
+              <button form="formProdutos"class="btn btn-primary" name="inserir" value="produto">Salvar</button>
             </div>
           </div>
         </div>

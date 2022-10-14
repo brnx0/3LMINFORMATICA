@@ -22,7 +22,17 @@ require_once('connect.php');
             
 
         }
+        public function delete(){
+            $this->stmt = $this->getConnection()->prepare('DELETE FROM  grupos WHERE id = :idGrupo');
+            $this->stmt->bindParam(':idGrupo', $_POST['idGrupo']);
+            $this->stmt->execute();
+            
+
+    
+        }
+       
     }
+
    
     
  

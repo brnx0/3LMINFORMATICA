@@ -1,3 +1,15 @@
+#noFlex{
+    display: block;
+    padding-left: 10rem; /*Menu*/
+}
+#logo{
+    display: contents;
+}
+.logo{
+    height: 50px;
+}
+
+
 .listagemGrupos{
     width: auto;
     display: flex;
@@ -28,7 +40,9 @@ thead tr{
     display: flex;
     /* align-items: center; */
     justify-content: space-evenly;
-    background-color: rgb(155, 155, 155)
+    background-color: rgb(140, 140, 140);
+    font-weight: bolder;
+    
 
 }
 thead tr td{
@@ -51,4 +65,37 @@ tbody tr td{
     display: flex;
     justify-content: center;
 }
+.colorir {
+    background-color:#81bef7;
+}
 
+
+.linha { cursor:pointer}
+.linha:hover { background-color:#81bef7}
+.red { color:red; }
+
+
+
+
+#desc{
+    width:20%;
+}
+#cod{
+    width:20%;
+}
+#und{
+    width:10%;
+}
+#gp{
+    width:15%;
+}
+
+#tp{
+    width:15%;
+}
+#saldo{
+    width:15%;
+}
+#check{
+    width: 5%;
+}

@@ -30,9 +30,14 @@
                 <?php
                     require_once '.\admin/validar.php';
                     foreach ($grupo->read() as $grupo->row): ?>
-                   <tr>
+                   <tr class="linha">
                       
                       <td><?= $grupo->row['grupo']?>      </td>
+                      <td id="check">
+                        <form action=".\admin/validar.php" id="excluirGrupo" method="post">
+                          <input type="radio" name="idGrupo" value="<?=$grupo->row['id']; ?>">
+                        </form>
+                      </td>
 
                   </tr>
                   <?php endforeach ?>
@@ -43,8 +48,8 @@
                 
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-              <button  form="formGrupo" class="btn btn-primary" name="tableGrupo" value="grupo" >Salvar</button>
+            <button form="excluirGrupo" class="btn btn-secondary" name="delete" value="grupo">Excluir</button>
+              <button  form="formGrupo" class="btn btn-primary" name="inserir" value="grupo" >Salvar</button>
             </div>
           </div>
         </div>
