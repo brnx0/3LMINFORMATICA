@@ -4,7 +4,7 @@ Se preferirem podem  clonar o repositorio e rodar com o auxilio do XAMPP, ou qua
 
 
 1º Salvar a aplicação na pasta "C:\xampp\htdocs"<br/> 
-2º Fazer o import do arquivo "3lm.sql" no banco de dados<br/>
+2º Fazer o import do arquivo "3lm.sql" no banco de dados<br/> (Talvez o comando USE possa causar conflito em algumas versões)
 2ª Executar o servidor apache do xamp + MySQL<br/> 
 4º Acessar pelo link http://localhost/3LMINFORMATICA/<br/>
 <br/>
