@@ -3,7 +3,7 @@ Prezados, o desafio foi desenvolvido para web. Estarei hospedando e disponibiliz
 Se preferirem podem  clonar o repositorio e rodar com o auxilio do XAMPP, ou qualquer outro servidor apache. 
 
 1º Salvar a aplicação na pasta "C:\xampp\htdocs"<br/> 
-2º Fazer o import do arquivo "3lm" no banco de dados<br/>
+2º Fazer o import do arquivo "3lm.sql" no banco de dados<br/>
 2ª Executar o servidor apache do xamp + MySQL<br/> 
 4º Acessar pelo link http://localhost/3LMINFORMATICA/<br/>
 <br/>
